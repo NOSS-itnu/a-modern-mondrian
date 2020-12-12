@@ -1,0 +1,394 @@
+
+<head>
+<title>NOSS - Nirma Open Source Society</title>
+<style>
+HTML CSSResult Skip Results Iframe
+:root {
+  --yellow: #ffc600;
+  --black: #272727;
+}
+
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+  /* A system font stack so things load nice and quick! */
+  color:black
+}
+
+/*
+  WAT IS THIS?!
+  We inherit box-sizing: border-box; from our <html> selector
+  Apparently this is a bit better than applying box-sizing: border-box; directly to the * selector
+*/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+
+  background-size: 340px, auto;
+  /* background: white; */
+  background-position: fixed;
+  letter-spacing: -1px;
+  border: 1px solid black;
+  background-color:black;
+}
+
+/* Each item in our grid will contain numbers */
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(0, 0, 0);
+  font-size: 35px;
+  min-height: 70px;
+  min-width: 30px;
+
+}
+
+.item p {
+  margin: 0 0 2px 0;
+}
+
+/*----------------------------------------------*/
+
+       .container {
+      display: grid;
+      grid-template-columns: repeat(16, 1fr);
+      grid-auto-flow: dense;
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #ce0f52, #8016c7,yellow);
+      background-size: 400% 400%;
+      animation: gradient 7s ease infinite;
+      height: 100%;
+    }
+    @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes example {
+  0%   {background-color: rgba(255, 0, 0, 0.466);}
+  25%  {background-color: rgba(255, 255, 0, 0.397);}
+  50%  {background-color: rgba(0, 0, 255, 0.473);}
+  100% {background-color: rgba(255, 0, 0, 0.479);}
+}
+@keyframes opacity {
+  0%   { background-color:rgba(255, 255, 255, 0.7);}
+  25%  { background-color:rgba(255, 255, 255, 0.8);}
+  50%  { background-color:rgba(255, 255, 255, 0.9);}
+  100% { background-color:rgba(255, 255, 255, 0.7);}
+}
+
+
+    .item1 {
+      grid-column: span 2;
+      background: rgba(133, 18, 18, 0.4);
+      
+    }
+
+    .item2 {
+      background: rgb(255, 255, 255,0.4);
+      grid-column: span 3;
+    }
+
+    .item3 {
+      background: rgb(250, 250, 255,0.3);
+      grid-column: span 2;
+    }
+
+    .item4 {
+      background: rgb(47, 91, 223,0.4);
+      grid-row: span 3;
+      grid-column: span 3;
+    }
+ .item5 {
+   background: rgb(250, 250, 0.4);
+      grid-column: span 1;
+    }
+ .item6 {
+      background: none;
+      grid-column: span 1;
+    }
+ .item7 {
+      background: rgb(255, 255, 255);
+      grid-column: span 4;
+      animation-name: opacity;
+      animation-duration: 15s;
+      animation-iteration-count: infinite
+    }
+ .item8 {
+      background: rgba(255, 255, 255, 0.603);
+      grid-column: span 1;
+   grid-row: span 3;
+    }
+ .item9 {
+      grid-column: span 4;
+      grid-row: span 6;
+      transition: 0.1s;
+      background: rgba(0, 0, 0)
+      
+    }
+ .item10 {
+   background: rgba(255, 255, 0, 0.5);
+      grid-column: span 2;
+   grid-row: span 3;
+    }
+ .item11 {
+   background: rgba(255, 255, 0, 0.4);
+      grid-column: span 2;
+   grid-row: span 1;
+    }
+ .item12 {
+      background: rgb(233, 53, 53,0.4);
+      grid-column: span 3;
+   grid-row: span 4;
+    }
+ .item13 {
+      background: rgba(255, 255, 0, 0.61);
+      grid-column: span 1;
+   grid-row: span 5;
+    }
+ .item14 {
+      background: rgb(63, 14, 199,0.4);
+      grid-column: span 2;
+   grid-row: span 3;
+    }
+ .item15 {
+    transition: 0.1s;
+      background: rgba(0, 0, 0, 0.5);
+      grid-column: span 3;
+   grid-row: span 3;
+   
+    }
+ .item16 {
+   background: rgba(255, 0, 0, 0.575);
+      grid-column: span 1;
+   grid-row: span 4;
+   
+    }
+ .item17 {
+   background-color: rgba(255, 0, 0, 0.61);
+      grid-column: span 1;
+   grid-row: span 3;
+   
+    }
+ .item18 {
+      background: rgba(109, 78, 167, 0.589);
+      grid-column: span 2;
+   grid-row: span 1;
+   animation-name: example;
+   animation-duration: 15s;
+   animation-iteration-count: infinite
+    }
+.item19 {
+      background: rgba(255, 255, 255, 0.603);
+      grid-column: span 1;
+   grid-row: span 3;
+    }
+.item20 {
+      background: rgba(0, 0, 0, 0.568);
+      grid-column: span 3;
+   grid-row: span 2;
+    }
+.item21 {
+      background: white;
+      grid-column: span 3;
+   grid-row: span 1;
+   animation-name: opacity;
+   animation-duration: 15s;
+   animation-iteration-count: infinite
+    }
+.item22 {
+      background: rgba(255, 255, 255, 0.575);
+      grid-column: span 2;
+   grid-row: span 1;
+    }
+.item23 {
+      background: rgba(0, 0, 0, 0.589);
+      grid-column: span 2;
+   grid-row: span 2;
+   animation-name: example;
+   animation-duration: 15s;
+   animation-iteration-count: infinite
+    }
+.item24 {
+      background: rgba(255, 255, 255, 0.582);
+      grid-column: span 2;
+   grid-row: span 1;
+    }
+.item25 {
+      background: rgba(255, 255, 255, 0.377);
+      grid-column: span 1;
+   grid-row: span 3;
+    }
+.item26 {
+      background: rgba(255, 255, 255, 0.61);
+      grid-column: span 2;
+   grid-row: span 1;
+   animation-name: example;
+   animation-duration: 15s;
+   animation-iteration-count: infinite
+    }
+.item27 {
+      background: white;
+      grid-column: span 1;
+   grid-row: span 2;
+   opacity: 0.6;
+   animation-name: opacity;
+   animation-duration: 15s;
+   animation-iteration-count: infinite
+    }
+.item28 {
+      background: white;
+      grid-column: span 1;
+   grid-row: span 2;
+   opacity: 0.6;
+   animation-name: opacity;
+   animation-duration: 15s;
+   animation-iteration-count: infinite
+    }
+.item29 {
+      background: rgba(255, 0, 0, 0.562);
+      grid-column: span 1;
+   grid-row: span 2;
+    }
+.item30 {
+      background: rgba(65, 105, 225, 0.644);
+      grid-column: span 5;
+   grid-row: span 2;
+    }
+.item31 {
+      background: rgba(255, 255, 0, 0.76);
+  grid-column: span 1;
+  grid-row: span 2;
+}
+.item32 {
+      background: rgba(255, 255, 255, 0.705);
+      grid-column: span 2;
+   grid-row: span 1;
+    }
+.item33 {
+      background: rgba(65, 105, 225, 0.521);
+      grid-column: span 2;
+   grid-row: span 2;
+    }
+.item36 {
+      background: rgba(255, 255, 0, 0.596);
+      grid-column: span 3;
+   grid-row: span 1;
+    }
+.item34 {
+      background: rgba(255, 255, 255, 0.815);
+      grid-column: span 2;
+   grid-row: span 1;
+   animation-name: opacity;
+      animation-duration: 15s;
+      animation-iteration-count: infinite;
+    }
+.item35 {
+      background: rgba(0, 0, 0, 0.452);
+      grid-column: span 2;
+   grid-row: span 1;
+    }
+.item36 {
+      background: rgba(255, 255, 255, 0.521);
+      grid-column: span 2;
+   grid-row: span 1;
+   animation-name: opacity;
+      animation-duration: 15s;
+      animation-iteration-count: infinite
+    }
+.item37 {
+      background: rgba(255, 255, 0, 0.603);
+      grid-column: span 2;
+   grid-row: span 1;
+    }
+.item38 {
+      grid-column: span 5;
+   grid-row: span 1;
+   transition: 0.1s;
+   background: rgba(0, 0, 0, 0.4)
+   
+    }
+    .item38:hover {
+        background: rgba(0, 0, 0, 0.9)
+    }
+
+.text {
+ color:white;
+ font-family: 'Amiri', serif;
+ text-align: center;
+}
+.subtext {
+    color:white;
+    font-family: 'IBM Plex Mono', monospace;
+    text-align: center;
+}
+a {
+    display: block;
+    height: 100%;
+}
+a:link {
+    text-decoration: none;
+    color:white;
+}
+
+a:visited {
+    text-decoration: none;
+    color:white;
+}
+</style>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri&family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
+</head>
+  <div class="container">
+    <div class="item item1">&nbsp;</div>
+    <div class="item item2">&nbsp;</div>
+    <div class="item item3">&nbsp;</div>
+    <div class="item item4">&nbsp;</div>
+    <div class="item item5">&nbsp;</div>
+    <div class="item item6">&nbsp;</div>
+    <div class="item item7">&nbsp;</div>
+    <div class="item item8">&nbsp;</div>
+    <div class="item item9"><p class="text" style ="font-size: 70px">A Modern Mondrian</p></div>
+    <div class="item item10">&nbsp;</div>
+    <div class="item item11">&nbsp;</div>
+    <div class="item item12">&nbsp;</div>
+    <div class="item item13">&nbsp;</div>
+    <div class="item item14">&nbsp;</div>
+    <div class="item item15">&nbsp;</div>
+    <div class="item item16">&nbsp;</div>
+    <div class="item item17">&nbsp;</div>
+    <div class="item item18">&nbsp;</div>
+    <div class="item item19">&nbsp;</div>
+    <div class="item item20">&nbsp;</div>
+    <div class="item item21">&nbsp;</div>
+    <div class="item item22">&nbsp;</div>
+    <div class="item item23">&nbsp;</div>
+    <div class="item item24">&nbsp;</div>
+    <div class="item item25">&nbsp;</div>
+    <div class="item item26">&nbsp;</div>
+    <div class="item item27">&nbsp;</div>
+    <div class="item item28">&nbsp;</div>
+    <div class="item item29">&nbsp;</div>
+    <div class="item item30">&nbsp;</div>
+    <div class="item item31">&nbsp;</div>
+    <div class="item item32">&nbsp;</div>
+    <div class="item item33">&nbsp;</div>
+    <div class="item item34">&nbsp;</div>
+    <div class="item item35">&nbsp;</div>
+    <div class="item item36">&nbsp;</div>
+    <div class="item item37">&nbsp;</div>
+    <div class="item item38"> <p class="subtext" style ="font-size: 16px">Made with <span style="color: #e25555;">&#9829;</span> by <a href = https://github.com/prakhar-ai>prakhar-ai</a></p></div>
+  
+ 
+  </div>
